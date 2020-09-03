@@ -1,0 +1,19 @@
+{
+	"name": "leaderboard-t3m",
+	"version": "1.0.0",
+	"description": "Leaderboard for the T3M",
+	"author": "Mysther",
+	"contributors": [
+		"Masterfox (Tom MOUNET)"
+	],
+	"main": "server.js",
+	"license": "MIT",
+	"repository": "github:mysther78/leaderboard-t3m",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"dependencies": {
+		"express": "^4.16.1",
+		"json-server": "^0.16.1"
+	}
+}
