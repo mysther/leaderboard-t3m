@@ -16,7 +16,7 @@
       <div class="container" >
         <!-- <img src="logo.png" alt="Logo BDE" height="180px"> -->
           <h1 class="display-4">Scoreboard T3M</h1>
-          <p class="lead">Abusus enim multitudine hominum, quam tranquillis in rebus diutius rexit, ex agrestibus habitaculis urbes construxit multis opibus firmas et viribus, quarum ad praesens pleraeque licet Graecis nominibus </p>
+          <p class="lead text-danger">AVERTISSEMENT : l'accès non autorisé à ce système est interdit et sera poursuivis par la loi. En accédant à ce système, vous acceptez que vos actions peut être surveillé si l'on soupçonne une utilisation non autorisée.</p>
         </div>
     </div>
     <div class="container">
@@ -84,8 +84,7 @@
 			data = json;
 		  	for (var i = 0; i < data.length; i++){
 				var option = document.createElement("option");
-				var text = document.createTextNode(data[i].name);
-				option.appendChild(text);
+				option.appendChild(document.createTextNode(data[i].name));
 				option.setAttribute("value", i)
 				equipeSelect.appendChild(option)
 			}

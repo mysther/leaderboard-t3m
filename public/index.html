@@ -15,39 +15,59 @@
             <h1>Leaderboard T3M</h1>
         </div>
         <div class='couche1'> 
-            <div class='container-rows'>
-                <div class='row first'>
-                    <div class='rank'>1</div>
-                    <div class='name'><img src='src/lama.png'/>Equipe 1</div>
-                    <div class='progression'>545</div>
-                </div>
-                <div class='row'>
-                    <div class='rank'>2</div>
-                    <div class='name'><img src='src/rah.png'/>Equipe 2</div>
-                    <div class='progression'>40</div>
-                </div>
-                <div class='row'>
-                    <div class='rank'>3</div>
-                    <div class='name'><img src='src/ane.png'/>Equipe 3</div>
-                    <div class='progression'>10</div>
-                </div>
-                <div class='row'>
-                    <div class='rank'>2</div>
-                    <div class='name'><img src='src/rah.png'/>Equipe 2</div>
-                    <div class='progression'>40</div>
-                </div>
-                <div class='row'>
-                    <div class='rank'>2</div>
-                    <div class='name'><img src='src/rah.png'/>Equipe 2</div>
-                    <div class='progression'>40</div>
-                </div>
-                <div class='row'>
-                    <div class='rank'>2</div>
-                    <div class='name'><img src='src/lama.png'/>Equipe 2</div>
-                    <div class='progression'>40</div>
-                </div>
+            <div id="dynlist" class='container-rows'>
             </div>
         </div>
     </div>
 </body>
 </html>
+
+<script type="text/javascript">
+	function initLeaderBoard() {
+        var dynlist = document.getElementById("dynlist");
+
+        fetch('/equipes?_sort=point&_order=desc', { 
+            method: 'GET'
+        })
+        .then(function(response) { return response.json(); })
+        .then(function(json) {
+            for (var i = 0; i < json.length; i++){
+                var row = document.createElement("div");
+                switch (i) {
+                    case 0:
+                        row.setAttribute("class", "row first")
+                        break;
+                    default:
+                        row.setAttribute("class", "row")
+                        break;
+                }
+                var rank = document.createElement("div");
+                rank.setAttribute("class", "rank")
+                rank.appendChild(document.createTextNode(i+1))
+
+                var name = document.createElement("div");
+                name.setAttribute("class", "name")
+
+                var img = document.createElement("img");
+                img.setAttribute("src", "src/" + json[i].maison + ".png")
+                
+                name.appendChild(img)
+                name.appendChild(document.createTextNode(json[i].name))
+                
+                var progression = document.createElement("div");
+                progression.setAttribute("class", "progression")
+                progression.appendChild(document.createTextNode(json[i].point))
+
+                row.appendChild(rank)
+                row.appendChild(name)
+                row.appendChild(progression)
+
+                dynlist.appendChild(row)
+            }
+        });
+	}
+
+	document.addEventListener("DOMContentLoaded", function() {
+    	initLeaderBoard();
+	});
+</script>
