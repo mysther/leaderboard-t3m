@@ -1,0 +1,103 @@
+{
+  "equipes": [
+    {
+      "name": "Equipe 1",
+      "maison": "rah",
+      "description": "Équipe",
+      "point": 0,
+      "lastupdate": 1585709084,
+      "id": 1
+    },
+    {
+      "name": "Equipe 2",
+      "maison": "lama",
+      "description": "Équipe",
+      "point": 0,
+      "lastupdate": 1585709084,
+      "id": 2
+    },
+    {
+      "name": "Equipe 3",
+      "maison": "ane",
+      "description": "Équipe",
+      "point": 0,
+      "lastupdate": 1585709084,
+      "id": 3
+    },
+    {
+      "name": "Equipe 4",
+      "maison": "rah",
+      "description": "Équipe",
+      "point": 0,
+      "lastupdate": 1585709084,
+      "id": 4
+    },
+    {
+      "name": "Equipe 5",
+      "maison": "lama",
+      "description": "Équipe",
+      "point": 0,
+      "lastupdate": 1585709084,
+      "id": 5
+    },
+    {
+      "name": "Equipe 6",
+      "maison": "ane",
+      "description": "Équipe",
+      "point": 0,
+      "lastupdate": 1585709084,
+      "id": 6
+    },
+    {
+      "name": "Equipe 7",
+      "maison": "rah",
+      "description": "Équipe",
+      "point": 0,
+      "lastupdate": 1585709084,
+      "id": 7
+    },
+    {
+      "name": "Equipe 8",
+      "maison": "lama",
+      "description": "Équipe",
+      "point": 0,
+      "lastupdate": 1585709084,
+      "id": 8
+    },
+    {
+      "name": "Equipe 9",
+      "maison": "ane",
+      "description": "Équipe",
+      "point": 0,
+      "lastupdate": 1585709084,
+      "id": 9
+    },
+    {
+      "name": "Equipe 10",
+      "maison": "rah",
+      "description": "Équipe",
+      "point": 0,
+      "lastupdate": 1585709084,
+      "id": 10
+    },
+    {
+      "name": "Equipe 11",
+      "maison": "lama",
+      "description": "Équipe",
+      "point": 0,
+      "lastupdate": 1585709084,
+      "id": 11
+    },
+    {
+      "name": "Equipe 12",
+      "maison": "ane",
+      "description": "Équipe",
+      "point": 0,
+      "lastupdate": 1585709084,
+      "id": 12
+    },
+  ],
+  "data": {
+    "maxpoint": 100
+  }
+}
