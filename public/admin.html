@@ -71,13 +71,12 @@
 </html>
 
 <script type="text/javascript">
-	var websiteApi = "http://192.168.221.138:3000";
 	var data;
 
 	function getEquipes() {
 		var equipeSelect = document.getElementById("EquipeSelect");
 
-		fetch(websiteApi + '/equipes?_sort=point&_order=desc', { 
+		fetch('/equipes?_sort=point&_order=desc', { 
 		  	method: 'GET'
 		})
 		.then(function(response) { return response.json(); })
@@ -107,7 +106,7 @@
 		}
 
 		var formJson = '{"point": ' + pointsInput + '}';
-		var response = await fetch(websiteApi + '/equipes/' + data[equipeInput].id, {
+		var response = await fetch('/equipes/' + data[equipeInput].id, {
 				method: 'PATCH',
 				body: JSON.stringify({point: pointsInput}),
 				headers: new Headers({
