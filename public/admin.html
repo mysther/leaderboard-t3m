@@ -97,6 +97,10 @@
 		var pointsInput = parseInt(document.getElementById("PointsInput").value);
 		var saveTokenCheck = document.getElementById("saveTokenCheck");
 
+		if (!pointsInput) {
+			pointsInput = 0
+		}
+
 		if (action === "add")
 			pointsInput += data[equipeInput].point
 		else if (action !== "set") {
