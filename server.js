@@ -9,7 +9,7 @@ const middlewares = jsonServer.defaults()
 var token
 
 try {
-  token = fs.readFileSync('./token', 'utf8')
+  token = fs.readFileSync('./token', 'utf8').trim()
 } catch (err) {
   console.error(err)
   return
