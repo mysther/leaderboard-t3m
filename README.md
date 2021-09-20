@@ -12,6 +12,7 @@
   * [Edit team](#edit-team)
   * [Remove team](#remove-team)
   * [Add/edit maison](#add-and-edit-maison)
+- [Docker](#docker)
 - [Preview](#preview)
 - [Contributing](#contributing)
 - [Licenses](#licenses)
@@ -78,6 +79,10 @@ DELETE https://localhost:3000/equipes/{id}
 
 #### Add and edit maison
 Add new image as `{maison_name}.png` in `public/src/`
+
+## Docker
+
+``` docker build -t leaderboard-t3m .```
 
 ## Preview
 
