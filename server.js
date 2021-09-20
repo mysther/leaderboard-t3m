@@ -9,15 +9,16 @@ const middlewares = jsonServer.defaults()
 var token
 
 try {
-  token = fs.readFileSync('./token', 'utf8').trim()
+ 	token = fs.readFileSync('./token', 'utf8').trim()
 } catch (err) {
-  console.error(err)
-  return
+  	console.error(err)
+	return
 }
+var authenticated = "Api Token " + token
 
 server.use(jsonServer.bodyParser)
 server.use((req, res, next) => {
-	if(req.method != "GET" && req.get("Authorization")  != "Api Token " + token) {
+	if(req.method != "GET" && req.get("Authorization") != authenticated) {
    		res.sendStatus(401)
 	}
 	else if(req.method != "GET") {
