@@ -1,10 +1,11 @@
 {
 	"name": "leaderboard-t3m",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "Leaderboard for the T3M",
 	"author": "Mysther",
 	"contributors": [
-		"Masterfox (Tom MOUNET)"
+		"Masterfox (Tom MOUNET)",
+		"LucasVidelaine"
 	],
 	"main": "server.js",
 	"license": "MIT",
